@@ -45,7 +45,8 @@ SPECTMP=/tmp/$HOSTNAME/specvol
 # benchmark scripts (python/shell) and results directory
 WORKDIR=/tmp/$HOSTNAME/workdir
 # where to find SSPEC2006_v12.tar.bz2 file
-# CAREFUL BIND file directory to Singularity container, see next variable
+# CAREFUL: BIND file directory to Singularity container, so it is available in teh container.
+# see next variable $SINGULARITY_BIND
 URL_TAR_DIR="/root"
 URL_TAR="file:$URL_TAR_DIR/SPEC2006_v12.tar.bz2"
 # bind dir for SSPEC2006_v12.tar.bz2 (oterwise no access from within singularity)
@@ -53,7 +54,7 @@ export SINGULARITY_BIND=$URL_TAR_DIR
 # SITE, e.g. company
 SITE=UNIFR
 # PURPOSE can be chosen freeely 
-PURPOSE="Powerusage"
+PURPOSE="Powertest"
 #--------------[End of user editable section]------------------------- 
 
 
